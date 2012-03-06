@@ -45,10 +45,6 @@ PLUGINS = Config(
 )
 
 # Jinja custom filters
-def appendhash(permalink, string):
-    """Append hash + string to the end of the given permalink."""
-    return permalink[:-1] + '#' + string
-
 def catlist(catlist):
     """Show categories in comma-separated links."""
     s = []
@@ -56,14 +52,8 @@ def catlist(catlist):
         s.append('<a href="/blog/category/' + cat + '/" class="button red">' + cat+ '</a>')
     return ', '.join(s)
 
-def displaytime(time, format):
-    """Show time according to format."""
-    return time.strftime
-
 JINJA2 = Config(
     FILTERS = {
-        'appendhash': appendhash,
         'catlist': catlist,
-        'displaytime': displaytime,
     }
 )
