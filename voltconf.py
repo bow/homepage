@@ -2,13 +2,8 @@
 
 import os
 
-from volt.config.base import Config
+from volt.config import Config
 
-
-# Volt configurations
-VOLT = Config(
-    COLORED_TEXT = True,
-)
 
 # General project configurations
 SITE = Config(
@@ -16,14 +11,15 @@ SITE = Config(
     URL = "http://bow.web.id",
     DESC = "Because static sites have potential",
     ENGINES = ['blog', 'plain'],
-    PLUGINS = (('volt-markdown', ['blog', 'plain']),
-               ('volt-atomic', ['blog']),
+    PLUGINS = (('markd', ['blog', 'plain']),
+               ('atomic', ['blog']),
     ),
+    COLORED_TERMINAL = True,
     DISQUS_NAME = "bow",
 )
 
 # Blog engine configurations
-BLOG = Config(
+ENGINE_BLOG = Config(
     URL = "blog",
     PERMALINK = "{time:%Y/%m}/{slug}",
     GLOBAL_FIELDS = {'author': 'Wibowo Arindrarto', },
@@ -34,14 +30,14 @@ BLOG = Config(
 )
 
 # Page engine configurations
-PLAIN = Config(
+ENGINE_PLAIN = Config(
     URL = "/",
     PERMALINK = "{slug}",
 )
 
 # Plugins configurations
-PLUGINS = Config(
-    ATOM_OUTPUT_FILE = os.path.join(os.getcwd(), 'site', 'atom.xml'),
+PLUGIN_ATOMIC = Config(
+    OUTPUT_FILE = os.path.join(os.getcwd(), 'site', 'atom.xml'),
 )
 
 # Jinja custom filters
@@ -52,8 +48,6 @@ def catlist(catlist):
         s.append('<a href="/blog/category/' + cat + '/" class="button red">' + cat+ '</a>')
     return ', '.join(s)
 
-JINJA2 = Config(
-    FILTERS = {
-        'catlist': catlist,
-    }
+JINJA2_FILTERS = Config(
+    catlist = catlist,
 )

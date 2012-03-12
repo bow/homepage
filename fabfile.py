@@ -6,14 +6,16 @@ from fabric.api import *
 from volt.config import CONFIG
 
 
-DRAFT_DIR = os.path.join(CONFIG.VOLT.ROOT_DIR, "drafts")
 POST_DATE = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 DRAFT_DATE = "0000/00/00 00:00:00"
 DEPLOY_TARGET = secret.DEPLOY_TARGET
 PACK_NAME = "homepage.tgz"
 
+POST_DIR = os.path.join(os.getcwd(), "content", "blog")
+DRAFT_DIR = os.path.join(POST_DIR, "drafts")
 
-def post_count(directory=CONFIG.BLOG.CONTENT_DIR):
+
+def post_count(directory=POST_DIR):
     """Returns published post count."""
     try:
         return max([int(f[:3]) for f in os.listdir(directory)])
@@ -28,7 +30,7 @@ def total_count():
     """Returns draft and published posts count."""
     return post_count() + draft_count()
 
-def post_list(directory=CONFIG.BLOG.CONTENT_DIR):
+def post_list(directory=POST_DIR):
     """Prints post filenames."""
     local("ls -l %s | awk '{print $9}'" % directory)
 
@@ -65,7 +67,7 @@ def post(index=draft_count()):
     """Post draft."""
     index = str(index).zfill(3)
     draft_name = glob.glob(os.path.join(DRAFT_DIR, "%s_*.draft.md" % index)).pop()
-    post_name = draft_name.replace(DRAFT_DIR, CONFIG.BLOG.CONTENT_DIR).replace(".draft", "")
+    post_name = draft_name.replace(DRAFT_DIR, POST_DIR).replace(".draft", "")
     local("sed -i -e's!%s!%s!' %s" % (DRAFT_DATE, POST_DATE, draft_name))
     local("mv %s %s" % (draft_name, post_name))
 

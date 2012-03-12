@@ -11,7 +11,7 @@
       | {{ unit.categories|catlist }}
       | <a href="{{ unit.permalink_abs }}#disqus_thread" class="button yellow">comment</a></p>
     </header>
-    {{ unit.content|striptags|truncate(length=CONFIG.BLOG.EXCERPT_LENGTH, end='...') }} <a href="{{ unit.permalink }}"><small>(more)</small></a>
+    {{ unit.content|striptags|truncate(length=400, end='...') }} <a href="{{ unit.permalink }}"><small>(more)</small></a>
     {{ engine }}
   </article>
   {% if not loop.last %}
