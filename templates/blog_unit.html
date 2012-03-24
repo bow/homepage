@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<article id="blog" class="body">
+ {% include "blog_header.html" %}
+  {{ page.content }}
+</article>
+{% if CONFIG.SITE.DISQUS_NAME %}
+<hr class="interblog" />
+<div id="disqus_thread"></div>
+{% include "disqus_count.html" %}
+{% include "disqus_embed.html" %}
+{% endif %}
+{% endblock %}

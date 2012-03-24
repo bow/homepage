@@ -1,0 +1,11 @@
+<header>
+  {% if not unit %}
+  {% set unit = page %}
+  {% endif %}
+  <a name="{{ unit.slug }}"></a>
+  <h1><a href="{{ unit.permalink }}">{{ unit.title }}</a></h1>
+  <p id="meta">
+  <a href="/blog/{{ unit.time|displaytime("%Y/%m")  }}/" class="button green">{{ unit.display_time }}</a>
+  | {{ unit.categories|catlist }}
+  | <a href="{{ unit.permalink_abs }}#disqus_thread" class="button yellow">comment</a></p>
+</header>
