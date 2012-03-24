@@ -11,10 +11,9 @@ SITE = Config(
     URL = "http://bow.web.id",
     DESC = "Because static sites have potential",
     ENGINES = ['blog', 'plain'],
-    PLUGINS = (('markd', ['blog', 'plain']),
+    PLUGINS = (('markdown_parser', ['blog', 'plain']),
                ('atomic', ['blog']),
     ),
-    COLORED_TERMINAL = True,
     DISQUS_NAME = "bow",
 )
 
@@ -26,7 +25,7 @@ ENGINE_BLOG = Config(
     DISPLAY_DATETIME_FORMAT = '%B %Y',
     POSTS_PER_PAGE = 5, 
     EXCERPT_LENGTH = 400, 
-    PACKS = ('', 'category/{categories}', '{time:%Y/%m}', '{time:%Y}',),
+    PAGINATIONS = ('', 'category/{categories}', '{time:%Y/%m}', '{time:%Y}',),
 )
 
 # Page engine configurations
