@@ -3,28 +3,32 @@ from datetime import datetime
 
 import secret
 from fabric.api import *
+
 from volt.config import CONFIG
+from volt.engine.builtins.blog import BlogEngine
 
 
-POST_DATE = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-DRAFT_DATE = "0000/00/00 00:00:00"
+CONTENT_DATETIME_FORMAT = BlogEngine.DEFAULTS.CONTENT_DATETIME_FORMAT
+POST_DATE = datetime.now().strftime(CONTENT_DATETIME_FORMAT)
+DRAFT_TIME = datetime(2000, 1, 1, 0, 0, 0).strftime(CONTENT_DATETIME_FORMAT)
 DEPLOY_TARGET = secret.DEPLOY_TARGET
 PACK_NAME = "homepage.tgz"
 
-POST_DIR = os.path.join(os.getcwd(), "content", "blog")
-DRAFT_DIR = os.path.join(POST_DIR, "drafts")
+POST_DIR = os.path.join(CONFIG.VOLT.CONTENT_DIR, 'blog')
+DRAFT_DIR = os.path.join(POST_DIR, 'drafts')
 
 
 def post_count(directory=POST_DIR):
     """Returns published post count."""
-    try:
-        return max([int(f[:3]) for f in os.listdir(directory)])
-    except ValueError:
-        return 0
+    files = [f for f in os.listdir(directory) if '.' in f]
+    return max([int(f.split('_', 1)[0]) for f in files])
 
 def draft_count():
     """Returns draft count."""
-    return len(os.listdir(DRAFT_DIR))
+    if os.path.exists(DRAFT_DIR):
+        return len(os.listdir(DRAFT_DIR))
+    else:
+        return 0
 
 def total_count():
     """Returns draft and published posts count."""
@@ -40,15 +44,17 @@ def draft_list():
 
 def draft(title):
     """Start writing a new draft."""
+    if not os.path.exists(DRAFT_DIR):
+        os.makedirs(DRAFT_DIR)
     template = "\n".join([
         "---",
         "categories: ",
-        "date: %(date)s",
+        "time: %(time)s",
         "title: %(title)s",
         "---",
         " ",
         ])
-    date = DRAFT_DATE
+    time = DRAFT_TIME
     count = str(total_count() + 1).zfill(3)
     format = os.path.join(DRAFT_DIR, "%s_%s.draft.md")
     title_file = "-".join(title.lower().split(" "))
@@ -63,22 +69,14 @@ def edit(index=total_count()):
     draft_name = glob.glob(os.path.join(DRAFT_DIR, "%s_*.draft.md" % index)).pop()
     local("vim %s" % draft_name)
 
-def post(index=draft_count()):
+def post(index=total_count()):
     """Post draft."""
     index = str(index).zfill(3)
+    print index
     draft_name = glob.glob(os.path.join(DRAFT_DIR, "%s_*.draft.md" % index)).pop()
     post_name = draft_name.replace(DRAFT_DIR, POST_DIR).replace(".draft", "")
-    local("sed -i -e's!%s!%s!' %s" % (DRAFT_DATE, POST_DATE, draft_name))
+    local("sed -i -e's!%s!%s!' %s" % (DRAFT_TIME, POST_DATE, draft_name))
     local("mv %s %s" % (draft_name, post_name))
-
-def generate():
-    """Generates site."""
-    local("volt gen")
-
-def serve():
-    """Generates site and serve."""
-    generate()
-    local("volt serve")
 
 def pack():
     """Packages the live site directory."""
@@ -88,7 +86,7 @@ def pack():
 @hosts(DEPLOY_TARGET)
 def deploy(message=None):
     """Deploy site to host."""
-    generate()
+    local('volt gen')
     if message:
         local('git add .')
         local('git cm -am "%s"' % message)
