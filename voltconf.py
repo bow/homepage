@@ -15,6 +15,7 @@ SITE = Config(
                ('atomic', ['blog']),
     ),
     DISQUS_NAME = "bow",
+    GOOGLE_ANALYTICS_ID = "UA-4847388-8",
 )
 
 # Blog engine configurations
