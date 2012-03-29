@@ -24,12 +24,12 @@ What I like best so far, though, was the way Arch handles its packages.
 I won't go into too much detail about Arch's package management system since [the wiki](https://wiki.archlinux.org/index.php/Arch_Build_System) already did a fantastic job of covering it. Instead, I just wanted to say how easy and simple it is to work with. Arch's package manager is [pacman](https://wiki.archlinux.org/index.php/Pacman), written from the ground up in C. For a distro that does not prioritize user convenience, I found it suprisingly more intuitive than Ubuntu's (Debian's, really) [apt](http://wiki.debian.org/Apt). The commands were simpler and the output more easily understood. Here's an example of both package managers installing [rtorrent](http://libtorrent.rakshasa.no/), the command line torrent manager:
 
 <figure>
-    <img src="/img/blog/003_apt.jpg" alt="apt installing rtorrent" title="apt installing rtorrent">
-    <figcaption>apt: cryptic output for (new) users?</figcaption>
+  <img src="/img/blog/003_apt.jpg" alt="apt installing rtorrent" title="apt installing rtorrent">
+  <figcaption>apt: cryptic output for (new) users?</figcaption>
 </figure>
 <figure>
-    <img src="/img/blog/003_pacman.jpg" alt="pacman installing rtorrent" title="pacman installing rtorrent">
-    <figcaption>pacman: surprisingly simple</figcaption>
+  <img src="/img/blog/003_pacman.jpg" alt="pacman installing rtorrent" title="pacman installing rtorrent">
+  <figcaption>pacman: surprisingly simple</figcaption>
 </figure>
 
 Now here's how both manager updates your installed programs. For apt the command is 
