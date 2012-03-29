@@ -15,7 +15,7 @@
     {% endif %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     <!--[if IE]>
@@ -34,21 +34,23 @@
   <body>
     <div id="wrapper">
       <header name="header-top" id="top" class="body">
-        <h1><a href="/">{{ CONFIG.SITE.TITLE  }}</a></h1>
-        <nav>
-          <ul>
-            <li><a href="/blog/" class="button green{% if "blog" in page.permalink %} active{% endif %}">blog</a></li>
-            <li><a href="/about/" class="button red{% if "about" in page.permalink %} active{% endif %}">about</a></li>
-            <li><a href="/contact/" class="button yellow{% if "contact" in page.permalink %} active{% endif %}">contact</a></li>
-          </ul>
-        </nav>
+        <div id="header-wrapper">
+          <h1><a href="/">{{ CONFIG.SITE.TITLE  }}</a></h1>
+          <nav>
+            <ul>
+              <li><a href="/blog/" class="button green{% if "blog" in page.permalink %} active{% endif %}">blog</a></li>
+              <li><a href="/about/" class="button red{% if "about" in page.permalink %} active{% endif %}">about</a></li>
+              <li><a href="/contact/" class="button yellow{% if "contact" in page.permalink %} active{% endif %}">contact</a></li>
+            </ul>
+          </nav>
+          <hr />
+        </div>
       </header>
-      <hr />
       <section name="section-content" id="content" class="body">
         {% block content %}{% endblock %}
       </section><!-- /#content -->
-      <hr />
       <footer name="footer-bottom" id="bottom" class="body">
+        <hr />
         <section id="bottom-info">
           <p><a href="http://creativecommons.org/licenses/by/3.0/" rel="external">&copy;</a>2011-2012 <a href="http://www.google.com/search?q=wibowo+arindrarto" rel="external">wibowo arindrarto</a> | proudly powered by <a href="http://github.com/bow/volt" rel="external">volt</a> | see the <a href="http://github.com/bow/homepage" rel="external">source</a></p>
         </section>
