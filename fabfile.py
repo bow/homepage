@@ -91,8 +91,10 @@ def deploy(message=None):
         local('git add .')
         local('git cm -am "%s"' % message)
     pack()
-    put("homepage.tgz", secret.REMOTE_DIR)
+    with lcd(CONFIG.VOLT.ROOT_DIR):
+        put("homepage.tgz", secret.REMOTE_DIR)
     with cd(secret.REMOTE_DIR):
-        run("rm -rf %s/*" % secret.REMOTE_PUBLIC)
+        run("rm -rf %s*" % secret.REMOTE_PUBLIC)
         run("tar xzfv %s -C %s && rm %s" % (PACK_NAME, secret.REMOTE_PUBLIC, PACK_NAME))
-    local("rm %s" % PACK_NAME)
+    with lcd(CONFIG.VOLT.ROOT_DIR):
+        local("rm %s" % PACK_NAME)
