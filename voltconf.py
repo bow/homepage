@@ -24,7 +24,7 @@ ENGINE_BLOG = Config(
     PERMALINK = "{time:%Y/%m}/{slug}",
     GLOBAL_FIELDS = {'author': 'Wibowo Arindrarto', },
     DISPLAY_DATETIME_FORMAT = '%B %Y',
-    POSTS_PER_PAGE = 5, 
+    UNITS_PER_PAGINATION = 5, 
     EXCERPT_LENGTH = 400, 
     PAGINATIONS = ('', 'category/{categories}', '{time:%Y/%m}', '{time:%Y}',),
 )
