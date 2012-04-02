@@ -26,7 +26,7 @@ ENGINE_BLOG = Config(
     DISPLAY_DATETIME_FORMAT = '%B %Y',
     UNITS_PER_PAGINATION = 5, 
     EXCERPT_LENGTH = 400, 
-    PAGINATIONS = ('', 'category/{categories}', '{time:%Y/%m}', '{time:%Y}',),
+    PAGINATIONS = ('', 'tag/{tags}', '{time:%Y/%m}', '{time:%Y}',),
 )
 
 # Page engine configurations
@@ -41,13 +41,13 @@ PLUGIN_ATOMIC = Config(
 )
 
 # Jinja custom filters
-def catlist(catlist):
+def taglist(tags):
     """Show categories in comma-separated links."""
     s = []
-    for cat in catlist:
-        s.append('<a href="/blog/category/' + cat + '/" class="button red">' + cat+ '</a>')
+    for tag in tags:
+        s.append('<a href="/blog/tag/' + tag + '/" class="button red">' + tag + '</a>')
     return ', '.join(s)
 
 JINJA2_FILTERS = Config(
-    catlist = catlist,
+    taglist = taglist,
 )

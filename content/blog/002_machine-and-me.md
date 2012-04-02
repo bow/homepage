@@ -1,7 +1,7 @@
 ---
-categories: Self, Tech
-time: 2011/09/09 13:03
 title: The Machine and Me
+time: 2011/09/09 13:03
+tags: self, tech
 ---
 I love tinkering with computers. In my early days with the machine, in the Win95 era, I used to spend time trying out all menu items or modifying random files and see what that got me. Sometimes the goal was just to get a game to work, other times I just wanted to see what went on under the hood. 
 

@@ -1,7 +1,7 @@
 ---
-categories: Tech
-time: 2011/09/11 13:03
 title: Going Arch
+time: 2011/09/11 13:03
+tags: tech
 ---
 I finally installed [Arch Linux](http://archlinux.org).
 

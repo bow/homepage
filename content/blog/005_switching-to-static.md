@@ -1,7 +1,7 @@
 ---
-categories: Tech, Website
-time: 2011/09/25 13:03
 title: Switching to Static
+time: 2011/09/25 13:03
+tags: tech, website
 ---
 
 It's been a long-time desire for me to have a proper website that I can call my own. Like our ancestors who explored foreign lands to settle with their tribes, I too feel that I need to claim some part of the digital terrain. 

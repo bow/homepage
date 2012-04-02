@@ -1,7 +1,7 @@
 ---
-categories: Tech, Book
-time: 2011/10/01 20:30
 title: A Glimpse at Google's Beginnings
+time: 2011/10/01 20:30
+tags: tech, book
 ---
 
 On September 27th 2011, [the biggest search engine company on the planet](http://www.google.com/ncr) officially turned 13 years old.

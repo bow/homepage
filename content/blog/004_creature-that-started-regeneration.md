@@ -1,7 +1,7 @@
 ---
-categories: Bio
-time: 2011/09/17 13:03
 title: The Creature that Started Regeneration
+time: 2011/09/17 13:03
+tags: bio
 ---
 Most (budding) scientists pick areas they think have the cool, interesting problems to work with. Of course people also do it for the improvement of mankind or the occasional financial gains. Still, one is rarely driven by those reasons alone. There's always the coolness factor involved. The late Richard Feynman said right, "Science is like sex, sometimes something useful comes out, but that is not the reason we are doing it."
 
