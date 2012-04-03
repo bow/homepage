@@ -10,9 +10,16 @@ SITE = Config(
     TITLE = "bow.web.id",
     URL = "http://bow.web.id",
     DESC = "Because static sites have potential",
-    ENGINES = ['blog', 'plain'],
-    PLUGINS = (('markdown_parser', ['blog', 'plain']),
-               ('atomic', ['blog']),
+    ENGINES = (
+        'blog',
+        'plain',
+    ),
+    PLUGINS = (
+        ('markdown_parser', ['blog', 'plain']),
+        ('atomic', ['blog']),
+    ),
+    EXTRA_PAGES = (
+        'index.html',
     ),
     DISQUS_NAME = "bow",
     GOOGLE_ANALYTICS_ID = "UA-4847388-8",
