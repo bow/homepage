@@ -9,10 +9,9 @@ from volt.config import Config
 SITE = Config(
     TITLE = "bow.web.id",
     URL = "http://bow.web.id",
-    DESC = "Because static sites have potential",
     ENGINES = (
-        'blog',
         'plain',
+        'blog',
     ),
     PLUGINS = (
         ('markdown_parser', ['blog', 'plain']),
@@ -25,21 +24,19 @@ SITE = Config(
     GOOGLE_ANALYTICS_ID = "UA-4847388-8",
 )
 
-# Blog engine configurations
-ENGINE_BLOG = Config(
-    URL = "blog",
-    PERMALINK = "{time:%Y/%m}/{slug}",
-    GLOBAL_FIELDS = {'author': 'Wibowo Arindrarto', },
-    DISPLAY_DATETIME_FORMAT = '%B %Y',
-    UNITS_PER_PAGINATION = 5, 
-    EXCERPT_LENGTH = 400, 
-    PAGINATIONS = ('', 'tag/{tags}', '{time:%Y/%m}', '{time:%Y}',),
-)
-
-# Page engine configurations
+# Plain engine configurations
 ENGINE_PLAIN = Config(
     URL = "/",
     PERMALINK = "{slug}",
+)
+
+# Blog engine configurations
+ENGINE_BLOG = Config(
+    URL = "/blog",
+    PERMALINK = "{time:%Y/%m}/{slug}",
+    PAGINATIONS = ('', 'tag/{tags}', '{time:%Y/%m}', '{time:%Y}',),
+    UNITS_PER_PAGINATION = 5, 
+    EXCERPT_LENGTH = 400, 
 )
 
 # Plugins configurations
@@ -49,11 +46,8 @@ PLUGIN_ATOMIC = Config(
 
 # Jinja custom filters
 def taglist(tags):
-    """Show categories in comma-separated links."""
-    s = []
-    for tag in tags:
-        s.append('<a href="/blog/tag/' + tag + '/" class="button red">' + tag + '</a>')
-    return ', '.join(s)
+    string = '<a href="/blog/tag/%s/" class="button red">%s</a>'
+    return ', '.join([string % (tag, tag) for tag in tags])
 
 JINJA2_FILTERS = Config(
     taglist = taglist,
