@@ -8,9 +8,9 @@ from volt.config import CONFIG
 from volt.engine.builtins.blog import BlogEngine
 
 
-CONTENT_DATETIME_FORMAT = BlogEngine.DEFAULTS.CONTENT_DATETIME_FORMAT
-POST_DATE = datetime.now().strftime(CONTENT_DATETIME_FORMAT)
-DRAFT_TIME = datetime(2000, 1, 1, 0, 0, 0).strftime(CONTENT_DATETIME_FORMAT)
+DATETIME_FORMAT = BlogEngine.DEFAULTS.DATETIME_FORMAT
+POST_DATE = datetime.now().strftime(DATETIME_FORMAT)
+DRAFT_TIME = datetime(2000, 1, 1, 0, 0, 0).strftime(DATETIME_FORMAT)
 DEPLOY_TARGET = secret.DEPLOY_TARGET
 PACK_NAME = "homepage.tgz"
 
