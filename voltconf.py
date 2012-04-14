@@ -35,10 +35,15 @@ ENGINE_BLOG = Config(
     PAGINATIONS = ('', 'tag/{tags}', '{time:%Y/%m}', '{time:%Y}',),
     UNITS_PER_PAGINATION = 5, 
     EXCERPT_LENGTH = 400, 
-    PLUGINS = ('markdown_parser', 'atomic',),
+    PLUGINS = ('syntax', 'markdown_parser', 'atomic',),
 )
 
 # Plugins configurations
 PLUGIN_ATOMIC = Config(
     OUTPUT_FILE = os.path.join(os.getcwd(), 'site', 'atom.xml'),
+)
+
+PLUGIN_SYNTAX = Config(
+    CSS_FILE = os.path.join(os.getcwd(), 'site', 'css', 'syntax_highlight.css'),
+    LINENO = False,
 )

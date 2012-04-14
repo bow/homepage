@@ -41,7 +41,7 @@
         text-align: left;
         clear: both;
         margin: auto;
-        width: 640px;
+        width: 670px;
     }
 
     /* Headings */
@@ -120,14 +120,14 @@
         background: #eee;
         margin-bottom: 1.6em;
         padding: .5em 1em;
-        border-top: 1px solid #888;
-        border-bottom: 1px solid #888;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
         font-family: 'Inconsolata', 'Courier New', 'Courier', monospace;
         line-height: 1.3em;
         font-size: 1.04em;
         white-space: pre;
+        overflow: auto;
     }
-    pre:hover {border-top: 1px solid #DB1212; border-bottom: 1px solid #DB1212;}
 
     /* Iframe, Object */
     iframe, object {
@@ -176,11 +176,6 @@
         border: 1px solid #ccc;
     }
 
-        /* Figure Caption */
-        figure:hover figcaption {background: #266AC9; color: #fdfdfd; }
-        figure:hover figcaption a {color: #111;}
-        figure:hover figcaption a:hover, figure:hover figcaption a:active {color: #fdfdfd;}
-
     /* Article */
     article {
         font-size: 1.3em; 
@@ -224,7 +219,7 @@
         top: 0;
         position: fixed;
         background: #fdfdfd;
-        width: 640px;
+        width: 670px;
     }
 
     #top hr, #paginate hr {
@@ -407,7 +402,7 @@
 
     /* Pagination */
     #paginate {
-        width: 640px;
+        width: 670px;
         margin: 1em 0 -1em;
         font-family: 'Maven Pro', 'Trebuchet Ms', Verdana, sans-serif;
         font-size: 1.2em;

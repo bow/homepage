@@ -16,6 +16,10 @@
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    {% if "blog" in page.permalink %}
+      <link rel="stylesheet" type="text/css" href="/css/syntax_highlight.css" />
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     <!--[if IE]>
