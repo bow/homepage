@@ -4,7 +4,11 @@
 {% for unit in page.units %}
   <article id="blog" class="body">
     {% include "blog_header.html" %}
-    {{ unit.content|striptags|truncate(length=400, end='...') }} <a href="{{ unit.permalink }}"><small>(more)</small></a>
+    {% set content = unit.content|striptags %}
+    {{ content|truncate(length=400, end='...') }}
+    {% if content|length > 400 %}
+      <a href="{{ unit.permalink }}"><small>(more)</small></a>
+    {% endif %}
     {{ engine }}
   </article>
   {% if not loop.last %}
