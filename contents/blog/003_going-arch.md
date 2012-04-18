@@ -34,15 +34,15 @@ I won't go into too much detail about Arch's package management system since [th
 
 Now here's how both manager updates your installed programs. For apt the command is 
 
-<pre>apt-get update && apt-get upgrade</pre>
+<pre>$ apt-get update && apt-get upgrade</pre>
 
 or
 
-<pre>apt-get update && apt-get dist-upgrade</pre>
+<pre>$ apt-get update && apt-get dist-upgrade</pre>
 
 while pacman does fine with 
 
-<pre>pacman -Syu</pre>
+<pre>$ pacman -Syu</pre>
 
 And there's plenty more comparison [here](https://wiki.archlinux.org/index.php/Pacman_Rosetta).
 

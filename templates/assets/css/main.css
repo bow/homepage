@@ -98,7 +98,7 @@
     blockquote footer {text-align: right; font-weight: bold;}
     blockquote:hover * a:link, blockquote:hover * a:visited {color: #111;}
     blockquote:hover * a:hover, blockquote:hover * a:active {color: #fdfdfd;}
-    blockquote:hover {background: #AB1212; color: #fdfdfd;}
+    blockquote:hover {background: #AB1212; color: #fdfdfd; border: 1px solid #AB1212}
     blockquote:before {
         content: '\201C';
         color: #888;
@@ -120,13 +120,19 @@
         background: #eee;
         margin-bottom: 1.6em;
         padding: .5em 1em;
-        border-top: 1px solid #aaa;
-        border-bottom: 1px solid #aaa;
         font-family: 'Inconsolata', 'Courier New', 'Courier', monospace;
         line-height: 1.3em;
-        font-size: 1.04em;
+        font-size: 1.05em;
         white-space: pre;
         overflow: auto;
+    }
+    code {
+        background: #eee;
+        padding: .15em .3em;
+        font-family: 'Inconsolata', 'Courier New', 'Courier', monospace;
+        line-height: 1.3em;
+        font-size: 1.08em;
+        white-space: pre;
     }
 
     /* Iframe, Object */
@@ -371,17 +377,28 @@
     a:hover.button.yellow, a:active.button.yellow, a.button.yellow.active {background: #E3AC2D;}
 
     /* Shadow */
-    table, figcaption, caption, blockquote, img, iframe, object {
+    table, img, iframe, object {
         box-shadow: 0px 0px 10px 0px #aaa;
         -moz-box-shadow: 0px 0px 10px 0px #aaa;
         -webkit-box-shadow: 0px 0px 10px 0px #aaa;
     }
+    
+    /* Border */
+    pre, code, caption, figcaption, blockquote {
+        border: 1px solid #aaa;
+    }
 
     /* Rounded Corners */
-    table, figcaption, caption, blockquote {
+    table, blockquote, pre {
         border-radius: .7em;
         -moz-border-radius: .7em;
         -webkit-border-radius: .7em;
+    }
+    
+    code, caption, figcaption {
+        border-radius: .4em;
+        -moz-border-radius: .4em;
+        -webkit-border-radius: .4em;    
     }
 
     /* Captions */
