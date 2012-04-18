@@ -35,7 +35,7 @@ ENGINE_BLOG = Config(
     PAGINATIONS = ('', 'tag/{tags}', '{time:%Y/%m}', '{time:%Y}',),
     UNITS_PER_PAGINATION = 5, 
     EXCERPT_LENGTH = 400, 
-    PLUGINS = ('syntax', 'markdown_parser', 'atomic',),
+    PLUGINS = ('markdown_parser', 'syntax', 'atomic',),
 )
 
 # Plugins configurations
