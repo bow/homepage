@@ -45,5 +45,7 @@ PLUGIN_ATOMIC = Config(
 
 PLUGIN_SYNTAX = Config(
     CSS_FILE = os.path.join(os.getcwd(), 'site', 'css', 'syntax_highlight.css'),
-    LINENO = False,
+    PYGMENTS_LEXER = {
+        'stripall': True,
+    },
 )
