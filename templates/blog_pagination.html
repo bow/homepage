@@ -7,7 +7,7 @@
     {% set content = unit.content|striptags %}
     {{ content|truncate(length=400, end='...') }}
     {% if content|length > 400 %}
-      <a href="{{ unit.permalink }}"><small>(more)</small></a>
+      <a href="{{ unit.permalink }}"><big>&rarr;</big></a>
     {% endif %}
     {{ engine }}
   </article>
