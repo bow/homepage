@@ -1,0 +1,13 @@
+{% if page.permalink_prev or page.permalink_next %}
+  <section id="paginate" class="body">
+    <hr id="paginate"/>
+{% endif %}
+{% if page.permalink_prev %}
+    <a href="{{ page.permalink_prev }}" id="prev" class="button green">newer</a>
+{% endif %}
+{% if page.permalink_next %}
+    <a href="{{ page.permalink_next }}" id="next" class="button green">older</a>
+{% endif %}
+{% if page.permalink_prev or page.permalink_next %}
+    </section>
+{% endif %}

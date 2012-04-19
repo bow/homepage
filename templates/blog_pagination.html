@@ -16,21 +16,7 @@
   {% endif %}
 {% endfor %}
 </section>
-
-{% if page.permalink_prev or page.permalink_next %}
-  <section id="paginate" class="body">
-    <hr id="paginate"/>
-{% endif %}    
-{% if page.permalink_prev %}
-    <a href="{{ page.permalink_prev }}" id="prev" class="button green">previous</a>
-{% endif %}
-{% if page.permalink_next %}
-    <a href="{{ page.permalink_next }}" id="next" class="button green">next</a>
-{% endif %}
-{% if page.permalink_prev or page.permalink_next %}
-    </section>
-{% endif %}
-
+{% include "blog_bottomnav.html" %}
 {% if CONFIG.SITE.DISQUS_NAME %}
 {% include "disqus_count.html" %}
 {% endif %}
