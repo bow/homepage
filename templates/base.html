@@ -5,23 +5,31 @@
     <meta name="description" content="Wibowo Arindrarto on the Web" />
     <meta name="keywords" content="wibowo, arindrarto, warindrarto, bow" />
     {% if "blog" in page.permalink and page.title %}
-    <title>{{ CONFIG.SITE.TITLE }} | {{ page.permalist|first }} - {{ page.title|capitalize }}</title>
+      <title>{{ CONFIG.SITE.TITLE }} | {{ page.permalist|first }} - {{ page.title|capitalize }}</title>
     {% elif "blog" in page.permalist %}
-    <title>{{ CONFIG.SITE.TITLE }} | blog</title>
+      <title>{{ CONFIG.SITE.TITLE }} | blog</title>
     {% elif page.permalist %}
-    <title>{{ CONFIG.SITE.TITLE }} | {{ page.title|lower }}</title>
+      <title>{{ CONFIG.SITE.TITLE }} | {{ page.title|lower }}</title>
     {% else %}
-    <title>{{ CONFIG.SITE.TITLE }}</title>
+      <title>{{ CONFIG.SITE.TITLE }}</title>
     {% endif %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    {% if "blog" in page.permalink %}
-      <link rel="stylesheet" type="text/css" href="/css/syntax_highlight.css" />
+    {% if "css_minifier" in widgets %}
+      <link rel="stylesheet" type="text/css" href="/css/minified.css" />
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      {% if "blog" in page.permalink and "syntax" in CONFIG.SITE.PLUGINS %}
+        <link rel="stylesheet" type="text/css" href="/css/syntax_highlight.css" />
+      {% endif %}
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" />
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
+    {% if "<pre>" in page.content or "<code>" in page.content %}
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
+    {% endif %}
+    {% if "blog" in CONFIG.SITE.ENGINES and "atomic" in CONFIG.SITE.PLUGINS %}
+      <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/atom.xml" />
+    {% endif %}
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->

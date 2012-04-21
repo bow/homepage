@@ -1,0 +1,52 @@
+.sprite-32px-paypal,
+.sprite-32px-skype,
+.sprite-32px-youtube,
+.sprite-32px-slideshare,
+.sprite-32px-github,
+.sprite-32px-twitter,
+.sprite-32px-picasa,
+.sprite-32px-google-talk,
+.sprite-32px-reddit,
+.sprite-32px-meetup,
+.sprite-32px-amazon,
+.sprite-32px-google-plus-black,
+.sprite-32px-retweet,
+.sprite-32px-flickr,
+.sprite-32px-google,
+.sprite-32px-feedburner,
+.sprite-32px-linkedin,
+.sprite-32px-twitter-2,
+.sprite-32px-facebook,
+.sprite-32px-email,
+.sprite-32px-lastfm,
+.sprite-32px-google-plus,
+.sprite-32px-rss,
+.sprite-32px-photobucket,
+.sprite-32px-soundcloud,
+.sprite-32px-add-this{background-image:url(/img/sprites.png);background-repeat:no-repeat}
+.sprite-32px-paypal{background-position:0px 0px;width:32px;height:32px;}
+.sprite-32px-skype{background-position:-32px 0px;width:32px;height:32px;}
+.sprite-32px-youtube{background-position:0px -32px;width:32px;height:32px;}
+.sprite-32px-slideshare{background-position:-32px -32px;width:32px;height:32px;}
+.sprite-32px-github{background-position:-64px 0px;width:32px;height:32px;}
+.sprite-32px-twitter{background-position:-64px -32px;width:32px;height:32px;}
+.sprite-32px-picasa{background-position:0px -64px;width:32px;height:32px;}
+.sprite-32px-google-talk{background-position:-32px -64px;width:32px;height:32px;}
+.sprite-32px-reddit{background-position:-64px -64px;width:32px;height:32px;}
+.sprite-32px-meetup{background-position:-96px 0px;width:32px;height:32px;}
+.sprite-32px-amazon{background-position:-96px -32px;width:32px;height:32px;}
+.sprite-32px-google-plus-black{background-position:-96px -64px;width:32px;height:32px;}
+.sprite-32px-retweet{background-position:0px -96px;width:32px;height:32px;}
+.sprite-32px-flickr{background-position:-32px -96px;width:32px;height:32px;}
+.sprite-32px-google{background-position:-64px -96px;width:32px;height:32px;}
+.sprite-32px-feedburner{background-position:-96px -96px;width:32px;height:32px;}
+.sprite-32px-linkedin{background-position:-128px 0px;width:32px;height:32px;}
+.sprite-32px-twitter-2{background-position:-128px -32px;width:32px;height:32px;}
+.sprite-32px-facebook{background-position:-128px -64px;width:32px;height:32px;}
+.sprite-32px-email{background-position:-128px -96px;width:32px;height:32px;}
+.sprite-32px-lastfm{background-position:0px -128px;width:32px;height:32px;}
+.sprite-32px-google-plus{background-position:-32px -128px;width:32px;height:32px;}
+.sprite-32px-rss{background-position:-64px -128px;width:32px;height:32px;}
+.sprite-32px-photobucket{background-position:-96px -128px;width:32px;height:32px;}
+.sprite-32px-soundcloud{background-position:-128px -128px;width:32px;height:32px;}
+.sprite-32px-add-this{background-position:-160px 0px;width:32px;height:32px;}
