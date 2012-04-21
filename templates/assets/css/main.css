@@ -380,6 +380,10 @@
     a:hover.button.red, a:active.button.red, a.button.red.active {background: #DB1212;}
     a:hover.button.yellow, a:active.button.yellow, a.button.yellow.active {background: #E3AC2D;}
 
+    article#blog a:link.button, arcticle#blog a:visited.button {
+        padding: 0 .3em;
+    }
+
     /* Shadow */
     table, img, iframe, object {
         box-shadow: 0px 0px 10px 0px #aaa;

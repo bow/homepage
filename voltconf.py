@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Volt configurations file
 
 import os
@@ -18,7 +19,7 @@ SITE = Config(
     ),
     DISQUS_NAME = "bow",
     GOOGLE_ANALYTICS_ID = "UA-4847388-8",
-    FILTERS = ('taglist',),
+    FILTERS = ('header_taglink', 'header_timelink',),
 )
 
 # Plain engine configurations
