@@ -17,6 +17,7 @@ SITE = Config(
     EXTRA_PAGES = (
         'index.html',
     ),
+    WIDGETS = ('css_minifier', ),
     DISQUS_NAME = "bow",
     GOOGLE_ANALYTICS_ID = "UA-4847388-8",
     FILTERS = ('header_taglink', 'header_timelink',),
