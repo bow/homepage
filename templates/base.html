@@ -15,20 +15,20 @@
     {% endif %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
-    {% if "css_minifier" in widgets %}
-      <link rel="stylesheet" type="text/css" href="/css/minified.css" />
+    {% if "css_minifier" in plugins %}
+      <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_CSS_MINIFIER.OUTPUT_FILE }}" />
     {% else %}
       <link rel="stylesheet" type="text/css" href="/css/main.css" />
-      {% if "blog" in page.permalink and "syntax" in CONFIG.SITE.PLUGINS %}
-        <link rel="stylesheet" type="text/css" href="/css/syntax_highlight.css" />
+      {% if "blog" in page.permalink and "syntax" in plugins %}
+        <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_SYNTAX.OUTPUT_FILE }}" />
       {% endif %}
     {% endif %}
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Maven+Pro" />
     {% if "<pre>" in page.content or "<code>" in page.content %}
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     {% endif %}
-    {% if "blog" in CONFIG.SITE.ENGINES and "atomic" in CONFIG.SITE.PLUGINS %}
-      <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/atom.xml" />
+    {% if "blog" in engines and "atomic" in plugins %}
+      <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/{{ CONFIG.PLUGIN_ATOMIC.OUTPUT_FILE }}" />
     {% endif %}
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
