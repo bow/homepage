@@ -15,11 +15,11 @@
     {% endif %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
-    {% if "css_minifier" in plugins %}
+    {% if "css_minifier" is activein CONFIG %}
       <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_CSS_MINIFIER.OUTPUT_FILE }}" />
     {% else %}
       <link rel="stylesheet" type="text/css" href="/css/main.css" />
-      {% if "blog" in page.permalink and "syntax" in plugins %}
+      {% if "blog" in page.permalink and "syntax" is activein CONFIG %}
         <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_SYNTAX.OUTPUT_FILE }}" />
       {% endif %}
     {% endif %}
@@ -27,7 +27,7 @@
     {% if "<pre>" in page.content or "<code>" in page.content %}
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     {% endif %}
-    {% if "blog" in engines and "atomic" in plugins %}
+    {% if "blog" in engines and "atomic" is activein CONFIG %}
       <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/{{ CONFIG.PLUGIN_ATOMIC.OUTPUT_FILE }}" />
     {% endif %}
     <!--[if IE]>
