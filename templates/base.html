@@ -27,7 +27,7 @@
     {% if "<pre>" in page.content or "<code>" in page.content %}
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     {% endif %}
-    {% if "blog" in engines and "atomic" is activatedin CONFIG %}
+    {% if ["blog", "atomic"] is activatedin CONFIG %}
       <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/{{ CONFIG.PLUGIN_ATOMIC.OUTPUT_FILE }}" />
     {% endif %}
     <!--[if IE]>
