@@ -5,7 +5,7 @@
     <meta name="description" content="Wibowo Arindrarto on the Web" />
     <meta name="keywords" content="wibowo, arindrarto, warindrarto, bow" />
     {% if "blog" in page.permalink and page.title %}
-      <title>{{ CONFIG.SITE.TITLE }} | {{ page.permalist|first }} - {{ page.title|capitalize }}</title>
+      <title>{{ CONFIG.SITE.TITLE }} | {{ page.permalist|first }} - {{ page.title }}</title>
     {% elif "blog" in page.permalist %}
       <title>{{ CONFIG.SITE.TITLE }} | blog</title>
     {% elif page.permalist %}
@@ -15,11 +15,11 @@
     {% endif %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
-    {% if "css_minifier" is activein CONFIG %}
+    {% if "css_minifier" is activatedin CONFIG %}
       <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_CSS_MINIFIER.OUTPUT_FILE }}" />
     {% else %}
       <link rel="stylesheet" type="text/css" href="/css/main.css" />
-      {% if "blog" in page.permalink and "syntax" is activein CONFIG %}
+      {% if "blog" in page.permalink and "syntax" is activatedin CONFIG %}
         <link rel="stylesheet" type="text/css" href="/css/{{ CONFIG.PLUGIN_SYNTAX.OUTPUT_FILE }}" />
       {% endif %}
     {% endif %}
@@ -27,7 +27,7 @@
     {% if "<pre>" in page.content or "<code>" in page.content %}
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata" />
     {% endif %}
-    {% if "blog" in engines and "atomic" is activein CONFIG %}
+    {% if "blog" in engines and "atomic" is activatedin CONFIG %}
       <link rel="alternate" type="application/rss+xml" title="bow.web.id | blog" href="/{{ CONFIG.PLUGIN_ATOMIC.OUTPUT_FILE }}" />
     {% endif %}
     <!--[if IE]>
