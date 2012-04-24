@@ -1,5 +1,5 @@
 ---
-title: Introducing: Volt, the New Static Website Generator
+title: Introducing Volt, the Static Site Generator with Potential
 time: 2012/04/24 08:00
 tags: python, website, static
 ---
@@ -60,11 +60,12 @@ The first alpha (version 0.0.1) was actually released a month ago. I'm only
 announcing it now since there were some missing features back then (not to
 mention the bugs to squash and tests to write). It still lacks a proper
 documentation, which is why I'm still labeling this release as alpha.
-I won't be able to add much to my current documentation branch since I will
-be focusing on Google Summer of Code for the next couple of months, but
-I'll be more than happy to receive bug reports or feature requests. I did
-comment a lot on the code (and in the docstrings), which I'm sure would be
-helpful to anyone willing to try their hands at Volt :).
+I won't be able to add much to my current documentation branch since [I will
+be focusing on Google Summer of Code](/blog/2012/04/google-summer-of-code-is-on/)
+for the next couple of months, but I'll be more than happy to receive
+bug reports or feature requests. I did comment a lot on the code
+(and in the docstrings), which I'm sure would be helpful to anyone
+willing to try their hands at Volt :).
 
 A very short guide on how to use Volt is available in the current
 [README](https://github.com/bow/volt/blob/master/README.rst).
