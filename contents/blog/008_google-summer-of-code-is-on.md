@@ -9,6 +9,10 @@ proposal](http://google-melange.appspot.com/gsoc/project/google/gsoc2012/warindr
 for [Google Summer of Code 2012](http://google-melange.appspot.com/gsoc/homepage/google/gsoc2012)
 has been accepted!
 
+<figure>
+  <img src="/img/blog/008_gsoc12.jpg" alt="Google Summer of Code 2012" title="Google Summer of Code 2012">
+</figure>
+
 Throughout the summer I'll be working on expanding
 [Biopython](http://biopython.org/) with a submodule for handling outputs from
 sequence-search programs. If you work in Biology, it's very likely that you
@@ -26,6 +30,11 @@ program does not display the exact same type of results, given their different
 algorithms. The bulk of my GSoC work will be to try and unify access to these
 different outputs in Biopython, drawing similarities across them all, so that
 the information in it is easier to access and interact with.
+
+<figure>
+  <img src="/img/blog/008_biopython.jpg" alt="Biopython Logo" title="Biopython Logo">
+  <figcaption>It's going to be a summer of the snake!</figcaption>
+</figure>
 
 I'll be posting more updates as I go along the weeks here, so expect more
 posts to come :).
