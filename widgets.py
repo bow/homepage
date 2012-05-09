@@ -19,3 +19,10 @@ def header_timelink(time_obj):
     year_url = time_url % (blog_url, time_obj.strftime("%Y"), year)
 
     return '%s%s' % (month_url, year_url)
+
+
+def sort_tags(engine):
+    """Widget for sorting blog tags."""
+    for unit in engine.units:
+        unit.tags.sort()
+    return

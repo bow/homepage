@@ -49,6 +49,9 @@ ENGINE_BLOG = Config(
         'syntax',
         'atomic',
     ),
+    WIDGETS = (
+        'sort_tags',
+    )
 )
 
 # Plugins configurations
