@@ -48,9 +48,9 @@ def draft(title):
         os.makedirs(DRAFT_DIR)
     template = "\n".join([
         "---",
-        "categories: ",
-        "time: %(time)s",
         "title: %(title)s",
+        "time: %(time)s",
+        "tags: ",
         "---",
         " ",
         ])
