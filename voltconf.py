@@ -56,7 +56,11 @@ ENGINE_BLOG = Config(
 
 # Plugins configurations
 PLUGIN_ATOMIC = Config(
-    OUTPUT_DIR = os.path.join(os.getcwd(), 'site'),
+    FEEDS = {
+        '': 'atom.xml',
+        'tags': 'atom-%s.xml',
+    },
+    OUTPUT_DIR = os.path.join(os.getcwd(), 'site', 'feed'),
 )
 
 PLUGIN_SYNTAX = Config(
