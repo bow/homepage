@@ -5,6 +5,7 @@ def header_taglink(tags):
     """Jinja2 filter for displaying blog tag links."""
     blog_url = '/blog'
     string = '<a href="%s/tag/%s/" class="button red">%s</a>'
+    tags.sort()
     return ', '.join([string % (blog_url, tag, tag) for tag in tags])
 
 
@@ -19,10 +20,3 @@ def header_timelink(time_obj):
     year_url = time_url % (blog_url, time_obj.strftime("%Y"), year)
 
     return '%s%s' % (month_url, year_url)
-
-
-def sort_tags(engine):
-    """Widget for sorting blog tags."""
-    for unit in engine.units:
-        unit.tags.sort()
-    return
