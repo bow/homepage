@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block title %}
+<title>{{ CONFIG.SITE.TITLE }} | blog</title>
+{% endblock %}
+
 {% block content %}
 <section id="chronological" class="body">
 {% for unit in page.units %}

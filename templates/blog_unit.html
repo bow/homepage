@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block title %}
+<title>{{ CONFIG.SITE.TITLE }} | blog - {{ page.title }}</title>
+{% endblock %}
+
 {% block content %}
 <article id="blog" class="body">
  {% include "blog_header.html" %}

@@ -4,15 +4,9 @@
     <meta charset="utf-8" />
     <meta name="description" content="Wibowo Arindrarto on the Web" />
     <meta name="keywords" content="wibowo, arindrarto, warindrarto, bow" />
-    {% if "blog" in page.permalink and page.title %}
-      <title>{{ CONFIG.SITE.TITLE }} | {{ page.permalist|first }} - {{ page.title }}</title>
-    {% elif "blog" in page.permalist %}
-      <title>{{ CONFIG.SITE.TITLE }} | blog</title>
-    {% elif page.permalist %}
-      <title>{{ CONFIG.SITE.TITLE }} | {{ page.title|lower }}</title>
-    {% else %}
+    {% block title %}
       <title>{{ CONFIG.SITE.TITLE }}</title>
-    {% endif %}
+    {% endblock %}
     <script type="text/javascript" src="/js/custom.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" />
     {% if "css_minifier" is activatedin CONFIG %}

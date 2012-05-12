@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block title %}
+<title>{{ CONFIG.SITE.TITLE }} | {{ page.title|lower }}</title>
+{% endblock %}
+
 {% block content %}
 <article id="{{ page.title|lower }}" class="body">
   {{ page.content }}
