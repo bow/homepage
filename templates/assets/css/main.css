@@ -316,6 +316,15 @@
         -webkit-border-radius: 5px;
     }
 
+    /* Pagination */
+    #pagination_title {
+        font-family: 'Maven Pro', 'Trebuchet Ms', Verdana, sans-serif;
+        display: block;
+        text-align: center;
+        font-size: 1.6em;
+        margin: 0 10em 1em;
+    }
+
     /* Blog */
     #blog header {margin-bottom: 1.2em;}
     #blog header h1 {font-size: 1.8em; text-align: center;}
@@ -365,7 +374,7 @@
 
 /***** Common *****/
     /* Buttons */
-    a:link.button, a:visited.button {
+    a:link.button, a:visited.button, .button {
         display: inline-block;
         color: #111; 
         padding: 0 .4em; 
@@ -374,11 +383,11 @@
         -moz-border-radius: .4em;
         -webkit-border-radius: .4em;
     }
-    a:hover.button, a:active.button, a.button.active {color: #fdfdfd;}
-    a:hover.button.blue, a:active.button.blue, a.button.blue.active {background: #266AC9;}
-    a:hover.button.green, a:active.button.green, a.button.green.active {background: #00A120;}
-    a:hover.button.red, a:active.button.red, a.button.red.active {background: #DB1212;}
-    a:hover.button.yellow, a:active.button.yellow, a.button.yellow.active {background: #E3AC2D;}
+    a:hover.button, a:active.button, a.button.active, .button.active {color: #fdfdfd;}
+    a:hover.button.blue, a:active.button.blue, a.button.blue.active, .button.blue.active {background: #266AC9;}
+    a:hover.button.green, a:active.button.green, a.button.green.active, .button.green.active {background: #00A120;}
+    a:hover.button.red, a:active.button.red, a.button.red.active, .button.red.active {background: #DB1212;}
+    a:hover.button.yellow, a:active.button.yellow, a.button.yellow.active, .button.yellow.active {background: #E3AC2D;}
 
     article#blog a:link.button, arcticle#blog a:visited.button {
         padding: 0 .3em;
