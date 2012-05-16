@@ -1,4 +1,5 @@
 site/
 secret.py
 profile.py
+test.py
 volt.profile
