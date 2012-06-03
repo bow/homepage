@@ -12,5 +12,4 @@ The best way to reach me is by email: [bow@bow.web.id](mailto:bow@bow.web.id). I
   <li><a href="http://github.com/bow" rel="external"><img class="sprite-32px-github" src="/img/trans.png" alt="Github" /></a></li>
   <li><a href="http://plus.google.com/109448393294572359590/posts" rel="external"><img class="sprite-32px-google-plus-black" src="/img/trans.png" alt="Google+" /></a></li>
   <li><a href="http://flickr.com/photos/artow" rel="external"><img class="sprite-32px-flickr" src="/img/trans.png" alt="Flickr" /></a></li>
-  <li><a href="http://last.fm/user/splatterdash" rel="external"><img class="sprite-32px-lastfm" src="/img/trans.png" alt="Last.fm" /></a></li>
 </ul>
