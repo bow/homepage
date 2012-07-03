@@ -5,10 +5,10 @@ import secret
 from fabric.api import *
 
 from volt.config import CONFIG
-from volt.engine.builtins.blog import BlogEngine
+from volt.engine.builtins.blog import Blog
 
 
-DATETIME_FORMAT = BlogEngine.DEFAULTS.DATETIME_FORMAT
+DATETIME_FORMAT = Blog.DEFAULTS.DATETIME_FORMAT
 POST_DATE = datetime.now().strftime(DATETIME_FORMAT)
 DRAFT_TIME = datetime(2000, 1, 1, 0, 0, 0).strftime(DATETIME_FORMAT)
 DEPLOY_TARGET = secret.DEPLOY_TARGET
