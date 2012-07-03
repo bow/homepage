@@ -10,7 +10,7 @@
 /****** Theme *****/
 /*
  * blue:    #266AC9;
- * green:   #00A120;
+ * green:   #147C29;
  * red:     #AB1212;
  * yellow:  #E3AC2D;
  * text:    #111;
@@ -57,7 +57,7 @@
     a img {border: 0px; text-decoration: none;}
     a:link, a:visited {
         padding: 0 1px;
-        color: #266AC9;
+        color: #147C29;
         text-decoration: none;
     }
     a:hover, a:active {color: #E3AC2D; text-decoration: none;}
@@ -150,7 +150,7 @@
         width: 80%;
         border-collapse: separate;
     }
-    table:hover {background: #00A120;}
+    table:hover {background: #147C29;}
 
         /* Table Caption */
         tbody tr td:first-child {background: #eee; border-top: 1px solid #fdfdfd; border-left: none;}
@@ -255,9 +255,9 @@
         font-size: 2.8em; 
         float: left;
     }
-    #top h1 a:link, #top h1 a:visited {color: #266AC9; padding: 0 .2em; text-decoration: none;}
+    #top h1 a:link, #top h1 a:visited {color: #147C29; padding: 0 .2em; text-decoration: none;}
     #top h1 a:hover, #top h1 a:active {
-        background: #266AC9;
+        background: #147C29;
         color: #fdfdfd;
         text-decoration: none;
         border-radius: .3em;
@@ -296,7 +296,13 @@
     #intro article {text-align: center;}
     #intro h1 {text-align: center; margin-bottom: .3em;}
     #intro p {text-align: center; margin-bottom: .2em;}
-    #intro figure {margin: 0 auto -1em;}
+    #intro figure img {
+        margin: 0 auto -1em;
+        border-radius: .6em;
+        -moz-border-radius: .6em;
+        -webkit-border-radius: .6em;
+        border: none;
+    }
     
     /* Contact */
     #contact li {
@@ -314,6 +320,20 @@
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
+    }
+
+    /* About */
+    img#profile {
+        height: 120px;
+        width: 120px;
+        float: left;
+        margin: 6px 15px 20px 5px;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        border-radius: .6em;
+        -moz-border-radius: .6em;
+        -webkit-border-radius: .6em;
     }
 
     /* Pagination */
@@ -385,7 +405,7 @@
     }
     a:hover.button, a:active.button, a.button.active, .button.active {color: #fdfdfd;}
     a:hover.button.blue, a:active.button.blue, a.button.blue.active, .button.blue.active {background: #266AC9;}
-    a:hover.button.green, a:active.button.green, a.button.green.active, .button.green.active {background: #00A120;}
+    a:hover.button.green, a:active.button.green, a.button.green.active, .button.green.active {background: #147C29;}
     a:hover.button.red, a:active.button.red, a.button.red.active, .button.red.active {background: #DB1212;}
     a:hover.button.yellow, a:active.button.yellow, a.button.yellow.active, .button.yellow.active {background: #E3AC2D;}
 
