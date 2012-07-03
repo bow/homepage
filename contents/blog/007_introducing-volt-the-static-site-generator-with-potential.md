@@ -1,7 +1,7 @@
 ---
 title: Introducing Volt, the Static Site Generator with Potential
 time: 2012/04/24 08:00
-tags: python, website, static
+tags: python, website, static, volt
 ---
 
 A few months ago I decided to build this site using Blogofile, one of the most
@@ -127,3 +127,8 @@ Volt with it. It's not the best tutorial or demo, but I suppose it could help
 until a proper documentation is released.
 
 Until then, explore Volt and see what it can do for you :)!
+
+<hr />
+
+Addendum 12/07/03: Blogofile development has restarted again, after a new
+maintainer decided to take over the original author's roles.
