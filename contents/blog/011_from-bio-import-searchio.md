@@ -1,7 +1,7 @@
 ---
 title: from Bio import SearchIO
 time: 2012/05/22 12:00
-tags: biopython, gsoc, python
+tags: biopython, gsoc, python, searchio
 ---
 
 The coding period has officially started. It's only about one month ago that I was anxiously waiting for the GSoC announcement, not knowing that I would end up coding with the [Biopython](http://biopython.org/) community. It's been going great and I'm hoping this will remain true for the rest of the summer :).

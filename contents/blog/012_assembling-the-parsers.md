@@ -1,7 +1,7 @@
 ---
 title: Assembling the Parsers
 time: 2012/05/30 22:30
-tags: biopython, python, gsoc, blast, hmmer
+tags: biopython, python, gsoc, blast, hmmer, searchio
 ---
 
 Last week was probably my busiest GSoC week so far, but also the most rewarding as well. I worked on three different parsers for SearchIO: two for BLAST+ and one for the HMMER suite. In brief, these are the highlights of my past week:

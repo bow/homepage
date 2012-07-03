@@ -1,7 +1,7 @@
 ---
 title: A Round Trip with SearchIO
 time: 2012/06/13 22:00
-tags: biopython, python, gsoc
+tags: biopython, python, gsoc, searchio
 ---
  
 Another Python-filled week has passed by, and that means more improvements for the SearchIO submodule. The highlight of the past week was two new features:

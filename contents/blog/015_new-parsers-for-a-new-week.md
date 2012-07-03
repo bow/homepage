@@ -1,7 +1,7 @@
 ---
 title: New Parsers for a New Week
 time: 2012/06/21 10:00
-tags: biopython, gsoc, python
+tags: biopython, gsoc, python, searchio, hmmer
 ---
 
 It's that time of the week again, for another SearchIO update. This week I added two new format support: `hmmer-tab` and `hmmer-domtab`. These are formats produced by the HMMER suite; the first triggered by using the `--tblout` flag, and the second one by using `--domtblout` flag. For now, both formats are fully supported for all three SearchIO operations: parsing/reading, indexing (both in memory and with a database), and writing. In this post, I'd just like to explain a bit on these two formats as there are some 'gotcha's that users should be aware of.

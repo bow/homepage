@@ -1,7 +1,7 @@
 ---
 title: Fasta Comes to SearchIO
 time: 2012/06/28 15:00
-tags: biopython, python, gsoc, searchio
+tags: biopython, python, gsoc, searchio, fasta
 ---
 
 The past week saw the addition of Fasta output ([the program](http://fasta.bioch.virginia.edu/), not the sequence file format) parsing and indexing support into SearchIO, under the `fasta-m10` name. In this post, I will briefly touch on the background of its support and some of its features. Along the way, you will also notice that the SearchIO objects now display more user-friendly outputs when we use `print` or `str` against them. This is another small feature that I have worked on in the past week.

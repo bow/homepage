@@ -1,7 +1,7 @@
 ---
 title: Hello Indexers
 time: 2012/06/06 22:00
-tags: biopython, python, gsoc
+tags: biopython, python, gsoc, searchio
 ---
 
 One of the most useful feature in Biopython's SeqIO module is indexing. This feature, implemented in `SeqIO.index` and `SeqIO.index_db`, allows users to do sequence parsing without having to iterate over the file contents from the beginning of the file. Basically, the idea is to store the file offsets of the start of each sequence record, in memory or in a database, and parse these records on the fly using the appropriate iterators. I won't go into the details of the usage (Biopython's [documentation](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc56) already does a fine job on that). I'd just like to note here that the feature will also be available in SearchIO.
