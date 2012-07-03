@@ -27,7 +27,7 @@ First up, the QueryResult object. As these objects sit on the top of the hierarc
 <pre lang="python">
 >>> from Bio import SearchIO
 >>>
->>> qresult = SearchIO.read('tblastx_human_wnts.xml', 'blast-xml')
+>>> qresults = SearchIO.parse('tblastx_human_wnts.xml', 'blast-xml')
 >>> for qresult in qresults:
 ...     qresult
 ...
