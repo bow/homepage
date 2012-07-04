@@ -303,6 +303,9 @@
         -webkit-border-radius: .6em;
         border: none;
     }
+    #intro figure figcaption {
+        margin: .2em auto 0;
+    }
     
     /* Contact */
     #contact li {
