@@ -60,7 +60,10 @@
         color: #147C29;
         text-decoration: none;
     }
-    a:hover, a:active {color: #E3AC2D; text-decoration: none;}
+    a:hover, a:active {
+        color: #E3AC2D;
+        text-decoration: none;
+    }
 
     /* Paragraphs*/
     p {margin-bottom: 1.6em;}
@@ -121,17 +124,17 @@
         margin-bottom: 1.6em;
         padding: .5em 1em;
         font-family: 'Inconsolata', 'Courier New', 'Courier', monospace;
-        line-height: 1.3em;
-        font-size: 1.05em;
+        line-height: 1.1em;
+        font-size: .95em;
         white-space: pre;
         overflow: auto;
     }
     code {
-        background: #eee;
-        padding: .1em .3em;
+        padding: .02em .15em;
+        color: #AB1212;
         font-family: 'Inconsolata', 'Courier New', 'Courier', monospace;
-        line-height: 1.3em;
-        font-size: 1.08em;
+        line-height: 1.2em;
+        font-size: 1em;
         white-space: pre;
     }
 
@@ -424,7 +427,7 @@
     }
     
     /* Border */
-    pre, code, caption, figcaption, blockquote {
+    pre, caption, figcaption, blockquote {
         border: 1px solid #aaa;
     }
 
