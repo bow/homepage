@@ -6,16 +6,16 @@ The Author
 ==========
 
 <img src="/img/profpic_270.jpg" id="profile">
-My name is Wibowo Arindrarto; my friends call me Bow or Bowo. I am an Indonesian, currently studying for a Biomedical Science Master's degree in Utrecht University, the Netherlands. 
+My name is Wibowo Arindrarto; my friends call me Bow or Bowo. I'm a bioinformatician currently based in Leiden, The Netherlands.
 
-Beside biology, I have a keen interest in programming and technology in general. It has led me to author the following open source projects:
+I have a keen interest in programming and technology in general, which has led me to author the following open source projects:
 
 * [Volt](https://github.com/bow/volt), a versatile Python-based static website generator
 * [abifpy](https://github.com/bow/abifpy), a Python module for reading [Sanger sequencing](http://en.wikipedia.org/wiki/DNA_sequencing#Dye-terminator_sequencing) trace files
 
-I am also involved in the [Biopython](http://biopython.org/wiki/Main_Page) project, which has recently [accepted me as a Google Summer of Code student](https://google-melange.appspot.com/gsoc/project/google/gsoc2012/warindrarto/13001).
+I am also involved in the [Biopython](http://biopython.org/wiki/Main_Page) project, initially as a [Google Summer of Code student](https://google-melange.appspot.com/gsoc/project/google/gsoc2012/warindrarto/13001).
 
-You can reach me through my email: [bow@bow.web.id](mailto:bow@bow.web.id), or on [Twitter](http://twitter.com/_bow_), [LinkedIn](http://www.linkedin.com/in/warindrarto), [Google+](https://plus.google.com/109448393294572359590/), or [GitHub](http://github.com/bow).
+You can reach me through [email](mailto:bow@bow.web.id) or on [Twitter](http://twitter.com/_bow_), [LinkedIn](http://www.linkedin.com/in/warindrarto), [Google+](https://plus.google.com/109448393294572359590/), or [GitHub](http://github.com/bow).
 
 <hr />
 
