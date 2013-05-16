@@ -60,6 +60,7 @@ ENGINE_BLOG = Config(
 PLUGIN_ATOMIC = Config(
     FEEDS = {
         '': 'atom.xml',
+        'tags': 'atom-%s.xml',
     },
     OUTPUT_DIR = os.path.join(os.getcwd(), 'site', 'feed'),
 )
