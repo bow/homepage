@@ -21,7 +21,7 @@ DRAFT_DIR = os.path.join(POST_DIR, 'drafts')
 def post_count(directory=POST_DIR):
     """Returns published post count."""
     files = [f for f in os.listdir(directory) if '.' in f]
-    return max([int(f.split('_', 1)[0]) for f in files])
+    return max([int(f.split('_', 1)[0]) for f in files if not f.startswith('.')])
 
 def draft_count():
     """Returns draft count."""
