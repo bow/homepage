@@ -26,6 +26,7 @@ SITE = Config(
         'header_taglink',
         'header_timelink',
     ),
+    INDEX_HTML_ONLY = True,
 )
 
 # Plain engine configurations

@@ -4,6 +4,6 @@
   {% endif %}
   <a name="{{ unit.slug }}"></a>
   <h1><a href="{{ unit.permalink }}">{{ unit.title }}</a></h1>
-  <p id="meta"> {{ unit.time|header_timelink }} | {{ unit.tags|header_taglink }}
+  <p id="meta"> {{ unit.time|header_timelink(CONFIG.SITE.INDEX_HTML_ONLY) }} | {{ unit.tags|header_taglink(CONFIG.SITE_INDEX_HTML_ONLY) }}
   | <a href="{{ unit.permalink_abs }}#disqus_thread" class="button yellow">comment</a></p>
 </header>

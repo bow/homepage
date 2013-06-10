@@ -43,8 +43,8 @@
           <h1><a href="/">{{ CONFIG.SITE.TITLE  }}</a></h1>
           <nav>
             <ul>
-              <li><a href="/about/" class="button yellow{% if "about" in page.permalink %} active{% endif %}">about</a></li>
-              <li><a href="/blog/" class="button blue{% if "blog" in page.permalink %} active{% endif %}">blog</a></li>
+              <li><a href={% if CONFIG.SITE.INDEX_HTML_ONLY is sameas false %}"about.html"{% else %}"/about/"{% endif %} class="button yellow{% if "about" in page.permalink %} active{% endif %}">about</a></li>
+              <li><a href={% if CONFIG.SITE.INDEX_HTML_ONLY is sameas false %}"blog.html"{% else %}"/blog/"{% endif %} class="button blue{% if "blog" in page.permalink %} active{% endif %}">blog</a></li>
             </ul>
           </nav>
           <hr />
