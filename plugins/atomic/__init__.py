@@ -15,6 +15,7 @@ from __future__ import with_statement
 import os
 import sys
 from datetime import datetime
+from functools import reduce
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -86,7 +87,7 @@ class Atomic(Plugin):
         template = env.get_template(self.config.TEMPLATE_FILE)
 
         # render and write to output file for each key: value pair in FEEDS
-        for field, outfile in self.config.FEEDS.iteritems():
+        for field, outfile in self.config.FEEDS.items():
 
             # create output dir if doesn't exist
             if not os.path.exists(self.config.OUTPUT_DIR):
