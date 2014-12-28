@@ -5,7 +5,7 @@ tags: gsoc, python, biopython
 ---
  
 After two weeks of waiting, I finally got the answer I was waiting for: [my
-proposal](http://google-melange.appspot.com/gsoc/project/google/gsoc2012/warindrarto/13001)
+proposal](https://docs.google.com/document/d/1wi46mTZCzKooxZGWMrdZpsJ-bjpp9fD50NF60exPKqg/edit)
 for [Google Summer of Code 2012](http://google-melange.appspot.com/gsoc/homepage/google/gsoc2012)
 has been accepted!
 
