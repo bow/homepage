@@ -24,8 +24,8 @@
       {% endif %}
     {% else %}
       {% set content = unit.content %}
-      {{ content|truncate(length=2000, end='...') }}
-      {% if content|length > 2000 %}
+      {{ content|truncate(length=CONFIG.ENGINE_BLOG.EXCERPT_LENGTH, end='...') }}
+      {% if content|length > CONFIG.ENGINE_BLOG.EXCERPT_LENGTH, %}
         <a href="{{ unit.permalink }}"><big>&rarr;</big></a>
       {% endif %}
     {% endif %}
