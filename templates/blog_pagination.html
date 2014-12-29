@@ -13,27 +13,30 @@
 {% if page.title %}
   <h1 id="pagination_title" class="button blue active">{{ page.title }}</h1>
 {% endif %}
+
 {% for unit in page.units %}
-  <article id="blog" class="body">
-    {% include "blog_header.html" %}
-    {% if page.title %}
-      {% set content = unit.content|striptags %}
-      {{ content|truncate(length=400, end='...') }}
-      {% if content|length > 400 %}
-        <a href="{{ unit.permalink }}"><big>&rarr;</big></a>
-      {% endif %}
+
+  {% if loop.first %}
+    {% if not page.units|in_same_year %}
+    <ol id="pagination" class="body"><span id="postgroup">In {{ unit.time.strftime("%Y") }}</span>
     {% else %}
-      {% set content = unit.content %}
-      {{ content|truncate(length=CONFIG.ENGINE_BLOG.EXCERPT_LENGTH, end='...') }}
-      {% if content|length > CONFIG.ENGINE_BLOG.EXCERPT_LENGTH, %}
-        <a href="{{ unit.permalink }}"><big>&rarr;</big></a>
-      {% endif %}
+    <ol id="pagination" class="body">
     {% endif %}
-  </article>
-  {% if not loop.last %}
-  <hr class="interblog">
+  {% elif unit.time.year != page.units[loop.index0 - 1].time.year %}
+    </ol>
+    <ol id="pagination" class="body"><span id="postgroup">In {{ unit.time.strftime("%Y") }}</span>
   {% endif %}
+    <li>
+      <span id="postitem"><a href="{{ unit.permalink }}">{{ unit.title }}</a></span>
+      <span id="meta"> - <span id="time">{{ unit.time|header_timelink(CONFIG.SITE.INDEX_HTML_ONLY) }}</span> | {{ unit.tags|header_taglink(CONFIG.SITE.INDEX_HTML_ONLY, 3) }}</span>
+    </li>
+
+  {% if loop.last %}
+  </ol>
+  {% endif %}
+
 {% endfor %}
+
 </section>
 {% include "blog_bottomnav.html" %}
 {% if CONFIG.SITE.DISQUS_NAME %}

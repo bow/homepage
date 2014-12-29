@@ -349,19 +349,37 @@
         font-size: 1.6em;
         margin: 0 10em 1em;
     }
+    #pagination {
+      font-size: 14px;
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    #pagination li {
+      margin: .2em;
+    }
+    #pagination #postgroup {
+        font-family: 'Maven Pro', 'Trebuchet Ms', Verdana, sans-serif;
+        font-size: 1.4em;
+    }
+    #pagination #postitem {
+        font-family: 'Maven Pro', 'Trebuchet Ms', Verdana, sans-serif;
+        font-size: 1.3em;
+    }
 
     /* Blog */
     #blog header {margin-bottom: 1.2em;}
     #blog header h1 {font-size: 1.8em; text-align: center;}
-    #blog header #meta {
+    #blog header #meta,
+    #pagination #meta {
         margin-top: -.3em;
         margin-bottom: 1em;
         text-align: center;
         font-size: .8em;
         color: #888;
     }
-    #blog header p a:link, #blog header p a:visited {color: #888;}
-    #blog header p a:hover, #blog header p a:active {color: #fdfdfd;}
+    #blog header p a:link, #blog header p a:visited, #pagination #meta a:link, #pagination #meta a:visited {color: #888;}
+    #blog header p a:hover, #blog header p a:active, #pagination #meta a:hover, #pagination #meta a:active {color: #fdfdfd;}
 
 
 /***** Bottom *****/

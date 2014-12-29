@@ -2,6 +2,7 @@
 # Volt configurations file
 
 import os
+from sys import maxint
 
 from volt.config import Config
 
@@ -25,6 +26,7 @@ SITE = Config(
     FILTERS = (
         'header_taglink',
         'header_timelink',
+        'in_same_year',
     ),
     INDEX_HTML_ONLY = True,
 )
@@ -48,7 +50,7 @@ ENGINE_BLOG = Config(
         '{time:%Y/%m}': "Posts in %B %Y",
         '{time:%Y}': "Posts in %Y",
     },
-    UNITS_PER_PAGINATION = 5,
+    UNITS_PER_PAGINATION = maxint,
     EXCERPT_LENGTH = 2000,
     PLUGINS = (
         'markdown_parser',
