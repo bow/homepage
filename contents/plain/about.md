@@ -6,7 +6,7 @@ The Author
 ==========
 
 <img src="/img/profpic_270.jpg" id="profile">
-My name is Wibowo Arindrarto (Bow or Bowo for short). I'm a bioinformatician currently based in Leiden, The Netherlands. My work mainly consists of building next generation sequencing pipelines and analyzing the results in high performance computing clusters using Python, R, and various command line tools. Occasionally, I also teach courses related to RNA-seq and general programming with Python.
+My name is Wibowo Arindrarto (Bow or Bowo for short). I'm a bioinformatician currently based in Leiden, The Netherlands. My work mainly consists of building next generation sequencing pipelines and analyzing the results in high performance computing clusters using Python, R, Scala, and various command line tools. Occasionally, I also teach courses related to RNA-seq and general programming with Python.
 
 I have a keen interest in programming and technology in general, which has led me to author the following open source projects:
 
