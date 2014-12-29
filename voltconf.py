@@ -2,7 +2,6 @@
 # Volt configurations file
 
 import os
-from sys import maxint
 
 from volt.config import Config
 
@@ -50,7 +49,7 @@ ENGINE_BLOG = Config(
         '{time:%Y/%m}': "Posts in %B %Y",
         '{time:%Y}': "Posts in %Y",
     },
-    UNITS_PER_PAGINATION = maxint,
+    UNITS_PER_PAGINATION = 500,
     EXCERPT_LENGTH = 2000,
     PLUGINS = (
         'markdown_parser',
