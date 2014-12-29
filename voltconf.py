@@ -14,9 +14,9 @@ SITE = Config(
         'plain',
         'blog',
     ),
-    PAGES = (
-        'index.html',
-    ),
+    PAGES = {
+        '/index.html': 'index.html',
+    },
     PLUGINS = (
         'css_minifier',
     ),
@@ -48,8 +48,8 @@ ENGINE_BLOG = Config(
         '{time:%Y/%m}': "Posts in %B %Y",
         '{time:%Y}': "Posts in %Y",
     },
-    UNITS_PER_PAGINATION = 5, 
-    EXCERPT_LENGTH = 400, 
+    UNITS_PER_PAGINATION = 5,
+    EXCERPT_LENGTH = 2000,
     PLUGINS = (
         'markdown_parser',
         'syntax',
