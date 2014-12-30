@@ -83,7 +83,6 @@ class Atomic(Plugin):
         env = Environment(loader=FileSystemLoader(
                 [CONFIG.VOLT.TEMPLATE_DIR, os.path.dirname(__file__)]))
         # pass in a built-in Volt jinja2 filter to display date
-        env.filters['displaytime'] = CONFIG.SITE.TEMPLATE_ENV.filters['displaytime']
         template = env.get_template(self.config.TEMPLATE_FILE)
 
         # render and write to output file for each key: value pair in FEEDS
