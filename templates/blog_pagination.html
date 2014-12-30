@@ -17,7 +17,7 @@
 {% for unit in page.units %}
 
   {% if loop.first %}
-    {% if not page.units|in_same_year %}
+    {% if page.units is not in_same_year %}
     <ol id="pagination" class="body"><span id="postgroup">In {{ unit.time.strftime("%Y") }}</span>
     {% else %}
     <ol id="pagination" class="body">
