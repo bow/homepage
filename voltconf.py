@@ -55,9 +55,6 @@ SITE = Config(
         'plain',
         'blog',
     ),
-    PAGES = {
-        '/index.html': 'index.html',
-    },
     PLUGINS = (
         'css_minifier',
     ),
