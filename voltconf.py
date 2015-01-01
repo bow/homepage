@@ -81,13 +81,13 @@ ENGINE_PLAIN = Config(
 ENGINE_BLOG = Config(
     URL = "/blog",
     PERMALINK = "{time:%Y/%m}/{slug}",
-    PAGINATIONS = {
+    PACKS = {
         '': '',
         'tag/{tags}': "Posts tagged '%s'",
         '{time:%Y/%m}': "Posts in %B %Y",
         '{time:%Y}': "Posts in %Y",
     },
-    UNITS_PER_PAGINATION = 500,
+    UNITS_PER_PACK = 500,
     EXCERPT_LENGTH = 2000,
     PLUGINS = (
         'markdown_parser',
