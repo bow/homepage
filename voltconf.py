@@ -4,6 +4,8 @@
 import os
 
 from volt.config import Config
+from volt.engine.builtins.blog import BlogEngine
+from volt.engine.builtins.plain import PlainEngine
 
 
 # Template filters and tests
@@ -47,13 +49,14 @@ def in_same_year(units):
                 return False
     return True
 
+
 # General project configurations
 SITE = Config(
     TITLE = "bow.web.id",
     URL = "http://bow.web.id",
     ENGINES = (
-        'plain',
-        'blog',
+        PlainEngine(),
+        BlogEngine(),
     ),
     PLUGINS = (
         'css_minifier',
